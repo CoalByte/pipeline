@@ -27,8 +27,8 @@ class ProductionLine:
 
     def exec_event(self):
         t = threading.Thread(target=self._execute_event, args=[None], daemon=None, name=f"{self.name}_exec_thread")
-        t.start()
         self.threads.append(t)
+        t.start()
 
 class Pipeline:
     def __init__(self):
