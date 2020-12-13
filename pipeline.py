@@ -57,7 +57,9 @@ class Pipeline:
                 return l
         return None
 
-    def wrapper(self, func, line_name):
-        def _inner():
-            self.lines.append(ProductionLine(filter=[func], name=line_name, on_section=None))
-        return _inner()
+    def check(self, line_name, *, on_section=None):
+        def wrapper(self, func):
+            def _inner():
+                self.lines.append(ProductionLine(filter=[func], name=line_name, on_section=on_section))
+            return _inner()
+        return wrapper
