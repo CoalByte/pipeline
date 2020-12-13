@@ -1,8 +1,6 @@
 # pipeline
 A simple lightweight and expandable pipeline framwork for Python.
 
-A pipeline for handling data in Python
-
 ### Basic Usage:
 
 Not using the pipeline wrapper:
