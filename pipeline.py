@@ -60,6 +60,10 @@ class Pipeline:
     def check(self, line_name, *, on_section=None):
         def wrapper(self, func):
             def _inner():
-                self.lines.append(ProductionLine(filter=[func], name=line_name, on_section=on_section))
+                self.add_check(func, line_name, on_section=on_section)
             return _inner()
         return wrapper
+    
+    def add_check(self, func, line_name, *, on_section=None):
+        if self._get_line(line_name) is None:
+            self.lines.append(ProductionLine(filter=[func], name=line_name, on_section=on_section))
