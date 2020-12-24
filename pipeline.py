@@ -25,10 +25,13 @@ class ProductionLine:
             self.on_section(self)
         self.threads.remove(self._get_thread(pid=threading.get_ident()))
 
-    def exec_event(self):
-        t = threading.Thread(target=self._execute_event, args=[None], daemon=None, name=f"{self.name}_exec_thread")
-        self.threads.append(t)
-        t.start()
+    def exec_event(self, _thread=True):
+        if _thread is True:
+            t = threading.Thread(target=self._execute_event, args=[None], daemon=None, name=f"{self.name}_exec_thread")
+            self.threads.append(t)
+            t.start()
+        else:
+            self._execute_event()
 
 class Pipeline:
     def __init__(self):
