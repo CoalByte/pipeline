@@ -1,9 +1,6 @@
 # pipeline
 A simple lightweight and expandable pipeline framwork for Python.
 
-# CURRENTLY NOT MAINTAINED
-The readme might be a bit outdated, make sure to open a request If you'd like to change anything.
-
 ### Basic Usage:
 
 Not using the pipeline wrapper:
@@ -36,3 +33,6 @@ You may also use the pipeline.wrapper even though It won't allow you to add any 
 ```py
 pipe.wrapper(line_name="cap", func=caps_rule)
 ```
+
+### **CURRENTLY NOT MAINTAINED**
+The readme might be a bit outdated, make sure to open a request If you'd like to change anything.
