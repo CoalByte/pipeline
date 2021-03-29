@@ -35,4 +35,5 @@ pipe.wrapper(line_name="cap", func=caps_rule)
 ```
 
 ### **CURRENTLY NOT MAINTAINED**
-The readme might be a bit outdated, make sure to open a request If you'd like to change anything.
+The readme **AND CODE** might be a bit outdated, make sure to open a request If you'd like to change anything.
+
